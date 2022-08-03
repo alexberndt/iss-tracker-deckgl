@@ -1,0 +1,174 @@
+/* copied from https://github.com/20treeAI/explorer/blob/master/src/assets/css/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500');
+
+.floating-view-button {
+  display: none;
+}
+
+.floating-map-popover {
+  display: block;
+  max-width: 500px;
+  min-width: 400px;
+  align-self: end;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .floating-view-button {
+    display: block;
+    position: fixed;
+    bottom: 45px;
+    left: 50%;
+    transform: translate(-50%, 0%); /* truly center component */
+    z-index: 3;
+  }
+
+  .floating-map-popover {
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    transform: none;
+    z-index: 4;
+    max-width: none;
+  }
+
+  .floating-map-popover .floating-view-button {
+    display: block;
+    position: absolute;
+    bottom: auto;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+html {
+  overflow: hidden;
+  height: -webkit-fill-available; /* Fix iOS mobile viewport */
+}
+
+body #root {
+  display: contents;
+  min-height: -webkit-fill-available; /* Fix iOS mobile viewport */
+}
+
+body {
+  margin: 0;
+  display: contents;
+  font-family: 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  /* line-height: 24px; */
+  /* identical to box height, or 150% */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #2e2e2e;
+  background-color: #ffffff;
+}
+
+input {
+  font-family: 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 72px;
+  /* identical to box height, or 129% */
+}
+h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  /* identical to box height, or 133% */
+}
+h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height, or 150% */
+}
+h4 {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+}
+body .light {
+  font-weight: 300;
+}
+body .regular {
+  font-weight: normal;
+}
+body .bold {
+  font-weight: 500;
+}
+body .small {
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+}
+.caption {
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+}
+.tiny {
+  font-size: 10px;
+  line-height: 16px;
+  /* identical to box height, or 160% */
+}
+
+button {
+  font-family: 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+}
+
+#tooltip {
+  background-color: #000000;
+  color: #ffffff;
+  position: absolute;
+  padding: 8px;
+  font-size: 14px;
+  pointer-events: none;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+/* old css */
+
+.content {
+  padding-bottom: 100px;
+}
+
+.footer {
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  background-color: #f5f5f5;
+}
+.footer p {
+  color: #054e30;
+}
